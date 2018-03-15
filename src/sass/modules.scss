@@ -1,0 +1,20 @@
+/*
+ * Bootstrap Styles
+ */
+@import "mixins";
+@import "functions";
+@import "variables";
+@import "grid";
+@import "forms";
+@import "buttons";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+
+/*
+Proyect styles
+*/
+@import "./global/_mixins",
+		"./global/_colors",
+		"./global/_typography",
+		"./global/_reset"

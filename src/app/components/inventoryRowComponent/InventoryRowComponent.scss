@@ -1,0 +1,159 @@
+@import '~sass/modules';
+
+
+.hotelProduct {
+  @include box-shadow (1px, 1px, 15px, $lighterGrey, false);
+  background-color: $white;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 205px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+
+  &__containerData {
+    display: flex;
+    justify-content: space-between;
+
+    &--image {
+      width: 300px;
+      margin-right: 15px;
+    }
+
+    &--name {
+      @include lead('Arial', 16, 18);
+      color: $lightblue;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-transform: capitalize;
+    }
+
+    &--starsContainer {
+      height: 20px;
+      margin-bottom: 20px;
+    }
+
+    &--star {
+      @include background('/assets/icons/filters/star.svg');
+      display: inline-block;
+      height: 20px;
+      padding: 0 3px;
+      width: 20px;
+    }
+
+    &--amneitiesContainer > * {
+      display: inline-block;
+      height: 20px;
+      padding: 0 5px;
+      width: 20px;
+    }
+
+    &--bathrobes {
+      @include background('/assets/icons/amenities/bathrobes.svg');
+    }
+
+    &--bathtub {
+    @include background('/assets/icons/amenities/bathtub.svg');
+    }
+
+    &--beach-pool-facilities {
+    @include background('/assets/icons/amenities/beach-pool-facilities.svg');
+    }
+
+    &--beach {
+    @include background('/assets/icons/amenities/beach.svg');
+    }
+
+    &--business-center {
+    @include background('/assets/icons/amenities/business-center.svg');
+    }
+
+    &--children-club {
+    @include background('/assets/icons/amenities/children-club.svg');
+    }
+
+    &--coffe-maker {
+    @include background('/assets/icons/amenities/coffe-maker.svg');
+    }
+
+    &--deep-soaking-bathtub {
+    @include background('/assets/icons/amenities/deep-soaking-bathtub.svg');
+    }
+
+    &--fitness-center {
+    @include background('/assets/icons/amenities/fitness-center.svg');
+    }
+
+    &--garden {
+    @include background('/assets/icons/amenities/garden.svg');
+    }
+
+    &--kitchen-facilities {
+    @include background('/assets/icons/amenities/kitchen-facilities.svg');
+    }
+
+    &--newspaper {
+    @include background('/assets/icons/amenities/newspaper.svg');
+    }
+
+    &--nightclub {
+    @include background('/assets/icons/amenities/nightclub.svg');
+    }
+
+    &--restaurant {
+    @include background('/assets/icons/amenities/restaurant.svg');
+    }
+
+    &--safety-box {
+    @include background('/assets/icons/amenities/safety-box.svg');
+    } 
+
+    &--separate-bredroom {
+    @include background('/assets/icons/amenities/separate-bredroom.svg');
+    }
+
+    &--sheets {
+    @include background('/assets/icons/amenities/sheets.svg');
+    }
+  }
+
+  &__descriptionContainer {
+    border-left: 1px dotted $dark_grey;
+    padding: 0 30px;
+    text-align: center;
+    vertical-align: top;
+
+    &--title {
+      @include lead('Arial', 12, 14);
+      color: $black;
+      line-height: 16px;
+      margin: 20px auto;
+      width: 80%;
+      text-align: center;
+    }
+
+    &--price {
+      @include lead('Arial', 30, 32);
+      font-weight: bold;
+      color: $orange;
+      margin-bottom: 15px;
+
+      sup {
+        @include lead('Arial', 22, 24);
+        font-weight: lighter;
+      }
+    }
+
+    &--button {
+      @include lead('Arial', 20, 22);
+      background-color: $darkblue;
+      border-radius: 5px 5px;
+      color: $white;
+      cursor: pointer;
+      padding: 10px 50px;
+    }
+  }
+}
+
+

@@ -1,0 +1,74 @@
+$browser-context: 16;
+
+@function calulateRem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem
+}
+
+@mixin font-family($font-family){
+  font-weight: normal;
+  font-family: $font-family;
+}
+
+@function calulateRem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem
+}
+
+@mixin rem($size, $lineHeightSize) {
+  font-size: $size+px;
+  font-size: calulateRem($size);
+  line-height: $lineHeightSize+px;
+  line-height: calulateRem($lineHeightSize);
+}
+
+@mixin context($element, $context){
+  width: $element / $context *100%
+}
+
+@mixin lead($font-family, $font-size, $line-height){
+  @include font-family($font-family);
+  @include rem($font-size, $line-height);
+}
+
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
+@mixin background-opacity($color, $alpha) {
+    background: $color; 
+    background: rgba($color, $alpha);
+}
+
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin transition() {
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $left $top $blur $color;
+    -moz-box-shadow:inset $left $top $blur $color;
+  box-shadow:inset $left $top $blur $color;
+  } @else {
+    -webkit-box-shadow: $left $top $blur $color;
+    -moz-box-shadow: $left $top $blur $color;
+    box-shadow: $left $top $blur $color;
+  }
+}

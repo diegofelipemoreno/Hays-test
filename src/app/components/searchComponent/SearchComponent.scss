@@ -1,0 +1,146 @@
+@import '~sass/modules';
+
+.searchContainer {
+  margin-right: 20px;
+
+  &__box {
+    @include box-shadow (1px, 1px, 12px, $lighterGrey, false);
+    @include lead('Arial', 14, 15);
+    background-color: $white;
+    box-sizing: border-box;
+    color: $lightblue;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+
+    &--stars {
+      @include lead('Arial', 12, 14);
+      color: $black;
+      display: inline-block;
+      font-weight: bold;
+      margin: 15px 20px 10px 0;
+    }
+
+    &--starsTitle {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+
+      &:before  {
+        @include background('/assets/icons/filters/star.svg');
+        content: '';
+        background-size: 15px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 17px;
+        width: 15px;
+      }
+    }
+
+    &--hotel {
+      clear: both;
+      display: block;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+
+      &:before  {
+        @include background('/assets/icons/filters/search.svg');
+        content: '';
+        background-size: 15px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 17px;
+        width: 15px;
+      }
+    }
+
+    &--input {
+      @include lead('Arial', 14, 14);
+      display: inline-block;
+      margin: 0 10px 0 0;
+      padding: 8px;
+      width: 62%;
+      text-align: l;
+      box-sizing: border-box;
+    }
+
+    &--button {
+      @include lead('Arial', 16, 16);
+      background-color: $darkblue;
+      border-radius: 2px 2px;
+      box-sizing: border-box;
+      color: $white;
+      cursor: pointer;
+      display: inline-block;
+      padding: 8px 4px;
+      text-align: center;
+      width: 32%;
+    }
+
+    &--starContainer > * {
+      clear: both;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    &--starContainer {
+      
+      &--star1:before,
+      &--star2:before,
+      &--star3:before,
+      &--star4:before,
+      &--star5:before {
+        @include background('/assets/icons/filters/star.svg');
+        content:'';
+        background-repeat: repeat-x;
+        background-size: 15px;
+        display: block;
+        height: 17px;
+        margin-left: 20px;
+        width: 15px;
+      }  
+
+      &--star1:before {
+         width: 15px;
+      }
+
+      &--star2:before {
+         width: 30px;
+      }
+
+      &--star3:before {
+         width: 45px;
+      }
+
+      &--star4:before {
+         width: 60px;
+      }
+
+      &--star5:before {
+         width: 75px;
+      }
+    }
+
+    &--allstars {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    @include box-shadow (1px, 1px, 12px, $lighterGrey, false);
+    @include lead('Arial', 16, 18);
+    color: $black;
+    background-color: $white;
+    box-sizing: border-box;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 15px 20px;
+    width: 100%;
+  }
+}

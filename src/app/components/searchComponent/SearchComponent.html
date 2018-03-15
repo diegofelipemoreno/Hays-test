@@ -1,0 +1,29 @@
+<div class="searchContainer">
+  <form [formGroup]="searchForm" (ngSubmit)="search()">
+    <fieldset>
+    <legend class="searchContainer__title">Filtros</legend>
+      <div class="searchContainer__box">
+        <label for="hotel" class="searchContainer__box--hotel">Nombre de hotel</label>
+        <input class="searchContainer__box--input" id="hotel" type="text" placeholder="Ingrese el nombre del hotel" formControlName="hotel">
+        <button class="searchContainer__box--button">Aceptar</button>
+      </div>
+      <div class="searchContainer__box">
+        <div class="searchContainer__box--starsTitle">Estrellas</div>
+        <input id="all-stars" class="searchContainer__box--allstars" type="checkbox" formControlName="allstars" (change)="allStarsEvent()">
+        <label for="all-stars" class="searchContainer__box--stars">Todas las estrellas</label>
+        <div class="searchContainer__box--starContainer" [formGroup]="stars" *ngIf="!this.searchForm.value.allstars">
+          <label for="star-5" class="sr-only">star 5</label>
+          <input id="star-5" class="searchContainer__box--starContainer--star5" type="checkbox" formControlName="star5">
+          <label for="star-4" class="sr-only">star 4</label>
+          <input id="star-4" class="searchContainer__box--starContainer--star4" type="checkbox" formControlName="star4">
+          <label for="star-3" class="sr-only">star 3</label>
+          <input id="star-3" class="searchContainer__box--starContainer--star3" type="checkbox" formControlName="star3">
+          <label for="star-2" class="sr-only">star 2</label>
+          <input id="star-2" class="searchContainer__box--starContainer--star2" type="checkbox" formControlName="star2">
+          <label for="star-1" class="sr-only">star 1</label>
+          <input id="star-1" class="searchContainer__box--starContainer--star1" type="checkbox" formControlName="star1">
+        </div>
+      </div>
+    </fieldset>
+  </form> 
+</div>

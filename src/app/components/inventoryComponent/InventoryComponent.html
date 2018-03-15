@@ -1,0 +1,9 @@
+<div class="row rowContainer">
+  <div class="col-sm-3">
+    <search-component (searchQuery)='onSearchNotify($event)'></search-component>
+  </div> 
+  <div class="col-sm-9">
+    <hotel-row *ngFor="let hotelRow of hotelList" [hotel]="hotelRow"></hotel-row>
+  </div> 
+</div>
+
